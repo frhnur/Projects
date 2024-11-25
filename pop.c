@@ -115,4 +115,3 @@ int main(int argc, char *argv[])
   customerMode(selling_price);
   return (0);
 }
-
