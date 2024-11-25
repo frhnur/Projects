@@ -1,0 +1,1 @@
+Welcome to my repository! This repository contains a collection of projects I have worked on in various programming languages. Each project demonstrates different skills, concepts, and techniques that I have learned and applied in my programming journey.
