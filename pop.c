@@ -1,10 +1,7 @@
 // 2024-11-20
 // pop.c
 // Farah Noor
-// Student ID: 501173551
-// Assignment #3 - Vending Machine
-// CCPS 393 Section 310
-// Instructor: L. Hiraki
+// Vending Machine
 // Purpose: To create a program which controls the operation of a soft drink vending machine.
 //
 // I certify that the program and code are my own work.
