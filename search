@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# 2024-10-09
+# search
+# Farah Noor
+# Student ID: 501173551
+# Assignment #1 - Database Unix Prog
+# CCPS 393 Section 310
+# Instructor: L. Hiraki
+# Purpose: To search a medication list and produce a report as requested by user.
+#
+# I certify that the program and code are my own work.
+#
+# I did use generative AI.
+# My citations and prompts are as follows:
+# I used AI to find the operator used for or, which is -o
+# I used AI to help me form this line from my code: if [[ $medicationCode ==  *$code* ]]
+# Specificically, I used it to find the syntax ** that will allow me to search if the value of one variable is anywhere inside another variable
+
+
+while true
+do
+  echo -n 'Enter Medication Code? '
+  read givenCode
+  if [ $givenCode = "ZZZ" ]
+  then
+    break
+  fi
+  echo -n 'See Generic Name (G/g) or Dose (D/d)? '
+  read nameOrDose
+  until [ $nameOrDose = "G" -o $nameOrDose = "g" -o $nameOrDose = "D" -o $nameOrDose = "d" ]
+  do
+    echo 'Please enter only G or D.'
+    echo -n 'See Generic Name (G/g) or Dose (D/d)? '
+    read nameOrDose
+  done
+  exists=false
+  while read line
+  do
+    medicationCode=${line:18:8}
+    if [[ "$medicationCode" ==  *"$givenCode"* ]]
+    then
+      if [ $nameOrDose = "G" -o $nameOrDose = "g" ]
+      then
+        genericName=${line:26:13}
+        echo "$medicationCode : $genericName"
+        exists=true
+      fi
+      if [ $nameOrDose = "D" -o $nameOrDose = "d" ]
+      then
+        dose=${line:4:14}
+        echo "$medicationCode : $dose"
+        exists=true
+      fi
+    fi
+  done < ~lhiraki/open/ccps393/medslist
+  if [ $exists = "false" ]
+  then
+    echo 'No such Medication Code. '
+  fi
+done
+echo "Goodbye."
+
+
+# Comprehensive Section:
+
+# 1. This assignemnt helped me get comfortable with all kinds of loops. Before this assignment, I have never tried a nested loop or using until and now I understand how they work.
+# I also learned how to properly use this command {::}. Since you cannot use the cut command on a variable, I realized that this is the situation where you use this command.
+
+# 2. One of my difficulties was understanding how to make the program return No such Medication Code.
+# Originally, I tried to use the line if $line != code outside of the nested while loop, but the program continued to return error messages.
+# This made me realize that the variable $line only exists within the scope of the nested while loop and I cannot call for it outside of the loop.
+# Another difficulty was figuring out how to check if the variable $line contains any part of $code in it in any part of it. Originally, I tried $line =  $code,
+# but this would return nothing. Then I understood that = checks if all of $line is equal to $code
