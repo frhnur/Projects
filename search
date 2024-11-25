@@ -3,20 +3,12 @@
 # 2024-10-09
 # search
 # Farah Noor
-# Student ID: 501173551
-# Assignment #1 - Database Unix Prog
-# CCPS 393 Section 310
-# Instructor: L. Hiraki
+# Database Unix Prog
 # Purpose: To search a medication list and produce a report as requested by user.
 #
 # I certify that the program and code are my own work.
 #
-# I did use generative AI.
-# My citations and prompts are as follows:
-# I used AI to find the operator used for or, which is -o
-# I used AI to help me form this line from my code: if [[ $medicationCode ==  *$code* ]]
-# Specificically, I used it to find the syntax ** that will allow me to search if the value of one variable is anywhere inside another variable
-
+# I did not use generative AI.
 
 while true
 do
@@ -60,15 +52,3 @@ do
   fi
 done
 echo "Goodbye."
-
-
-# Comprehensive Section:
-
-# 1. This assignemnt helped me get comfortable with all kinds of loops. Before this assignment, I have never tried a nested loop or using until and now I understand how they work.
-# I also learned how to properly use this command {::}. Since you cannot use the cut command on a variable, I realized that this is the situation where you use this command.
-
-# 2. One of my difficulties was understanding how to make the program return No such Medication Code.
-# Originally, I tried to use the line if $line != code outside of the nested while loop, but the program continued to return error messages.
-# This made me realize that the variable $line only exists within the scope of the nested while loop and I cannot call for it outside of the loop.
-# Another difficulty was figuring out how to check if the variable $line contains any part of $code in it in any part of it. Originally, I tried $line =  $code,
-# but this would return nothing. Then I understood that = checks if all of $line is equal to $code
