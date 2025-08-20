@@ -1,8 +1,8 @@
 # 2023-10-9
 # scourgify.py
 # Farah Noor
-# 
-# Purpose:
+# CSV Name Formatter
+# Purpose: converts a CSV with "last, first" names into a new CSV with separate "first", "last", and "house" columns
 
 import sys
 import csv
