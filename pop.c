@@ -3,10 +3,6 @@
 // Farah Noor
 // Vending Machine
 // Purpose: To create a program which controls the operation of a soft drink vending machine.
-//
-// I certify that the program and code are my own work.
-//
-// I did not use generative AI.
 
 #include <stdio.h>
 #include <stdlib.h>
