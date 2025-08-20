@@ -1,3 +1,8 @@
+// 2024-2-18
+// calendar.java
+// Farah Noor
+//
+// Purpose:
 // A simple data class to be used with the CalendarQueue lab problem. The objects
 // of this class are immutable calendar events, each one with the year and the day
 // of the event.
