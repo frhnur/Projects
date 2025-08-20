@@ -1,4 +1,9 @@
-# Import sys and csv
+# 2023-10-9
+# scourgify.py
+# Farah Noor
+# 
+# Purpose:
+
 import sys
 import csv
 
