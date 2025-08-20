@@ -5,10 +5,6 @@
 # Farah Noor
 # Database Unix Prog
 # Purpose: To search a medication list and produce a report as requested by user.
-#
-# I certify that the program and code are my own work.
-#
-# I did not use generative AI.
 
 while true
 do
