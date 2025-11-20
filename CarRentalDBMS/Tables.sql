@@ -48,7 +48,6 @@ CREATE TABLE VehicleColour(
     Colour VARCHAR2(20) NOT NULL CHECK (Colour IN ('Red', 'Black', 'White', 'Blue', 'Silver', 'Grey','Green', 'Orange', 'Yellow', 'Purple', 'Pink', 'Brown')),
     PRIMARY KEY (VehicleID, Colour),
     FOREIGN KEY (VehicleID) REFERENCES Vehicle(VehicleID)
-
 );
 
 CREATE TABLE Review(
